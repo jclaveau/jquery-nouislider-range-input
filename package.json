@@ -31,10 +31,9 @@
     },
     "homepage": "https://github.com/jclaveau/jquery-nouislider-range-input#readme",
     "peerDependencies": {
-        "jquery": "^1.7 || ^2.0 || ^3.1"
+        "jquery": "^1.7 || ^2.0 || ^3.3"
     },
     "dependencies": {
-        "chai-jq": "0.0.9",
         "nouislider": "git+https://github.com/leongersen/noUiSlider.git",
         "wnumb": "github:leongersen/wnumb"
     },
@@ -43,6 +42,7 @@
         "test": "test"
     },
     "devDependencies": {
+        "chai-jq": "0.0.9",
         "@babel/core": "^7.4.3",
         "@babel/preset-env": "^7.4.3",
         "babel-eslint": "^10.0.1",
