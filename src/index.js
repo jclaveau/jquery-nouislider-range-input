@@ -38,7 +38,7 @@ $.fn.enableNoUISlider = function() {
             noUiSliderInstance.set(this.value);
         });
 
-        noUiSliderInstance.on('change', (values, handle, unencoded, tap, positions) => {
+        noUiSliderInstance.on('change', (values, handle, unencoded/* , tap, positions */) => {
             $rangeInput.val(unencoded[0]).trigger('change');
             noUiSliderInstance.set(unencoded[0]);
         });
