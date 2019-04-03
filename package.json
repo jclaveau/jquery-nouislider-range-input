@@ -1,5 +1,5 @@
 {
-    "name": "jquery-nouislider-range-input",
+    "name": "jquery.nouislider-range-input",
     "version": "0.0.1",
     "description": "A jQuery plugin using noUISlider uppon standard HTML5 range input implementation",
     "main": "build/jquery.nouislider-range-input.js",
@@ -7,7 +7,7 @@
         "build": "webpack",
         "lint": "eslint src test",
         "test": "jest && npm run lint",
-        "watch": "jest --watchAll && npm run lint",
+        "watch": "jest --watchAll",
         "publish": "npm run build"
     },
     "repository": {
