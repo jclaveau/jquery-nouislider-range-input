@@ -1,17 +1,16 @@
 const $ = require('jquery'); // eslint-disable-line import/no-unresolved
+const NoUISlider = require('nouislider');
+const wNumb = require('wnumb');
 
-$.fn.enableNoUISlider = function(selector) {
+$.fn.enableNoUISlider = function() {
 
-    if (typeof selector === "undefined") {
-        selector = '.nouislider';
-    }
-
-    $('input[type=range]' + selector + ':not(.js-nouislider-initialized)').each(function() {
+    this.filter('input[type=range]:not(.js-nouislider-initialized)').each(function() {
         let $rangeInput = $(this);
 
         $rangeInput.css({'display': 'none'}).addClass('js-nouislider-initialized');
 
-        $wrapper = $('<div class="nouislider-range-wrapper"><div></div></div>').insertAfter($rangeInput);
+        let $wrapper = $('<div class="nouislider-range-wrapper"><div></div></div>')
+            .insertAfter($rangeInput);
 
         let min         = $rangeInput.attr('min')          ? Number($rangeInput.attr('min'))   : 0;
         let max         = $rangeInput.attr('max')          ? Number($rangeInput.attr('max'))   : 100;
@@ -31,10 +30,10 @@ $.fn.enableNoUISlider = function(selector) {
         };
 
         if (wnumbFormat !== null) {
-            options.format = Libs_wNumb( wnumbFormat );
+            options.format = wNumb( wnumbFormat );
         }
 
-        var noUiSliderInstance = Libs_noUiSlider.create( $wrapper.find('div').get(0), options );
+        var noUiSliderInstance = NoUISlider.create( $wrapper.find('div').get(0), options );
 
         $rangeInput.on('change', function () {
             noUiSliderInstance.set(this.value);
