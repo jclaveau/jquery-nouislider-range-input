@@ -6,7 +6,8 @@
     "scripts": {
         "build": "webpack",
         "lint": "eslint src test",
-        "test": "jest --watchAll && npm run lint",
+        "test": "jest && npm run lint",
+        "watch": "jest --watchAll && npm run lint",
         "publish": "npm run build"
     },
     "repository": {
