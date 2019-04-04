@@ -1,6 +1,6 @@
 {
     "name": "jquery.nouislider-range-input",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A jQuery plugin using noUISlider uppon standard HTML5 range input implementation",
     "main": "build/jquery.nouislider-range-input.js",
     "scripts": {
